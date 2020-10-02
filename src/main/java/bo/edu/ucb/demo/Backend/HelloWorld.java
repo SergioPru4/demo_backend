@@ -29,7 +29,7 @@ public class HelloWorld {
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.TEXT_PLAIN_VALUE)
     public String hello() {
-        return "HOLA MUNDO";
+        return "Primera pagina";
     }
 
     @RequestMapping(value = "/dos", method = RequestMethod.GET, produces = MediaType.TEXT_PLAIN_VALUE)
@@ -57,12 +57,27 @@ public class HelloWorld {
         public Integer studentId;
         public String fullName;
 
+        public Integer getStudentId() {
+            return studentId;
+        }
+
+        public String getFullName() {
+            return fullName;
+        }
+
+    }
+
+    private  class Print extends  Student{
         @Override
         public String toString() {
             return "Student{" +
-                    "studentId=" + studentId +
-                    ", fullName='" + fullName + '\'' +
+                    "studentId=" + getStudentId()+
+                    ", fullName='" + getFullName() + '\'' +
                     '}';
         }
+
     }
+
 }
+
+
