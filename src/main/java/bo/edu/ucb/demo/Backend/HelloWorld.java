@@ -57,26 +57,17 @@ public class HelloWorld {
         public Integer studentId;
         public String fullName;
 
-        public Integer getStudentId() {
-            return studentId;
-        }
-
-        public String getFullName() {
-            return fullName;
-        }
-
-    }
-
-    private  class Print extends  Student{
         @Override
         public String toString() {
             return "Student{" +
-                    "studentId=" + getStudentId()+
-                    ", fullName='" + getFullName() + '\'' +
+                    "studentId=" + studentId+
+                    ", fullName='" + fullName + '\'' +
                     '}';
         }
 
     }
+
+
 
 }
 
